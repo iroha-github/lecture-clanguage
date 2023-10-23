@@ -1,0 +1,9 @@
+{
+  "editor.fontFamily": "Source Han Code JP",
+  "editor.bracketPairColorization.enabled": false,
+  "editor.fontSize": 14,
+"C_Cpp.errorSquiggles": "disabled",
+"files.associations": {
+    "stdio.h": "c"
+}
+}
