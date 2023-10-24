@@ -10,8 +10,8 @@
 
 #include <stdio.h>
 
-void statics(double a, double b, double c, double *ave11, double *max, double *min){
-    *ave11 = ( a + b + c )/3 ;
+void statics(double a, double b, double c, double *ave, double *max, double *min){
+    *ave = ( a + b + c )/3 ;
 
     *max = a;
     *max = (*max < b) ? b : *max;
