@@ -6,47 +6,4 @@
     ・処理：与えられた整数値を並び替えてポインタ変数に値をコピーする。
 */
 
-#include <stdio.h>
-
-void sort(int *a, int *b, int *c, int *d){
-    int tmp;
-    if(*a > *b){
-        tmp = *a;
-        *a = *b;
-        *b = tmp;
-    }
-    if(*b > *c){
-        tmp = *b;
-        *b = *c;
-        *c = tmp;
-    }
-    if(*c > *d){
-        tmp = *c;
-        *c = *d;
-        *d = tmp;
-    }
-    if(*a > *b){
-        tmp = *a;
-        *a = *b;
-        *b = tmp;
-    }
-    if(*b > *c){
-        tmp = *b;
-        *b = *c;
-        *c = tmp;
-    }
-    if(*a > *b){
-        tmp = *a;
-        *a = *b;
-        *b = tmp;
-    }
-}
-
-int main(void){
-    int a, b, c, d;
-    printf("4つの整数を入力してください。\n");
-    scanf("%d %d %d %d", &a, &b, &c, &d);
-    sort(&a, &b, &c, &d);
-    printf("小さい順に並び替えた結果は %d %d %d %d です。\n", a, b, c, d);
-    return 0;
-}
+int main(void){}
