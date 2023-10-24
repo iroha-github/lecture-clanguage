@@ -10,17 +10,13 @@
 
 #include <stdio.h>
 
-void calc_ave(double a, double b, double c, double *ave){
+void statics(double a, double b, double c, double *ave, double *max, double *min){
     *ave = ( a + b + c )/3 ;
-}
 
-void calc_max(double a, double b, double c, double *max){
     *max = a;
     *max = (*max < b) ? b : *max;
     *max = (*max < c) ? c : *max;
-}
 
-void calc_min(double a, double b, double c, double *min){
     *min = a;
     if (*min > b) *min = b;
     if (*min > c) *min = b;
@@ -31,13 +27,9 @@ int main(void){
     printf("小数値を３つ入力してください\n");
     scanf("%lf %lf %lf",&a,&b,&c);
 
-    calc_ave(a, b, c, &ave);
+    statics(a, b, c, &ave, &max, &min);
     printf("平均値は%lf\n",ave);
-
-    calc_max(a, b, c, &max);
     printf("最大値は%lf\n",max);
-
-    calc_max(a, b, c, &min);
     printf("最小値は%lf\n",min);
 
     return 0;
