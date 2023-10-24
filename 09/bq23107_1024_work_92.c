@@ -20,7 +20,8 @@ void sort(int *n1, int *n2, int *n3, int *n4){
 int main(void){
     int n1, n2, n3, n4;
     printf("整数を４つ入力して下さい\n")
-    scanf("%d")
+    scanf("%d %d %d %d",&n1, &n2, &n3, &n4);
     sort(&n1, &n2, &n3, &n4);
+    print("整数を小さい順に並び替えます．")
     print("%d<%d<%d<%d",n1,n2,n3,n4);
 }
