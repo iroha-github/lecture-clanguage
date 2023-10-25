@@ -31,7 +31,9 @@ void statics(double *in, double *out){
 int main(void){
     double in[N];
     double out[3];
+
     printf("N(5)個の小数値を入力して下さい\n");
+    
     for(int i=0; i<N; i++){
         scanf("%lf",&in[i]);
     }
