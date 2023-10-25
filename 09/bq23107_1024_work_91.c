@@ -12,7 +12,8 @@
 
 void statics(double a, double b, double c, double *ave, double *max, double *min){
     *ave = ( a + b + c )/3 ;
-
+    
+    //複数の記述方法で
     *max = a;
     *max = (*max < b) ? b : *max;
     *max = (*max < c) ? c : *max;
