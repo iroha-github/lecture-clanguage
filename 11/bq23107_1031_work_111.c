@@ -9,6 +9,7 @@
     ・main関数でfor文を使い、関数Updateを呼び出し、data[i]の入力と出力を表示する。
     ＊#include <math.h>を使ってsin(theta)を計算する。ただし、 thetaはラジアン単位。
 */
+
 /*
 入力in    出力out
   0 
@@ -18,7 +19,6 @@
   2π
 
 */
-
 #include <stdio.h>
 #include <math.h>
 
@@ -27,15 +27,15 @@ struct Data{
     double out;
 };
 
-double data[5] = {0, 1/2π, π, 3/2π, 2π};
+struct Data data[5] = {{0, 0}, {M_PI/2, 0}, {M_PI, 0}, {3*M_PI/2, 0}, {2*M_PI, 0}};
 
-void Update(double in double out){
-    double out = sin(double in);
-    printf(out);
+void Update(struct Data* d){
+    d->out = sin(d->in);
+    printf("in: %f, out: %f\n", d->in, d->out);
 }
 
 int main(void){
     for(int i=0; i<5; i++){
-        Update(data[i]);
+        Update(&data[i]);
     }
 }
