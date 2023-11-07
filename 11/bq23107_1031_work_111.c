@@ -10,15 +10,7 @@
     ＊#include <math.h>を使ってsin(theta)を計算する。ただし、 thetaはラジアン単位。
 */
 
-/*
-入力in    出力out
-  0 
- 1/2π
-  π
- 3/2π
-  2π
 
-*/
 #include <stdio.h>
 #include <math.h>
 #ifndef M_PI
