@@ -28,7 +28,7 @@ int main(void){
     int in[3], out[3];
     int i = 0;
 
-    printf("素数か否かを判定します．");
+    printf("素数か否かを判定します．\n");
 
     while (i < 3){
         printf("%d番目の数字を入力してください\n",i+1);

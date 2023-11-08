@@ -1,22 +1,23 @@
 #include <stdio.h>
 
-int main(void) {
+int main(void){
     FILE *fp;
-    double x, y, z;
+    double x,y,z;
+    fp = fopen("test.txt", "r");
 
-    fp = fopen("data.dat", "r");
-    if (fp == NULL) {
-        printf("指定されたファイルが開けませんので，プログラムを終了します．\n");
+    if(fp == NULL){
+        printf("error\n");
         return -1;
     } else {
-        printf("指定されたファイルをオープンしました．\n");
+        printf("read OK!\n");
     }
 
     fscanf(fp, "%lf, %lf, %lf", &x, &y, &z);
     fclose(fp);
+    printf("close OK!\n");
 
-    printf("ファイルをクローズしました。\n");
-    printf("読み込んだデータの総和は %f です．\n", x + y + z);
+    printf("読み込んだデータの総和は %f です．¥n", x + y + z);
 
     return 0;
+
 }
