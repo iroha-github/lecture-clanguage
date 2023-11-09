@@ -33,16 +33,16 @@ int main(void){
         double t, t2, out1, out2, out3;
 
         while(1){
-                if(fscanf(fp1, "%lf %lf %lf", &t, &out1, &out2) != EOF){
+            if(fscanf(fp1, "%lf %lf %lf", &t, &out1, &out2) != EOF){
 
-                        t2 = t*2;
-                        out3 = sin(t2*M_PI*2);
+                t2 = t*2;
+                out3 = sin(t2*M_PI*2);
 
-                        fprintf(fp2, "%lf %lf\r\n", t2, out3);
-                        i++;
-                } else {
-                        break;
-                }
+                fprintf(fp2, "%lf %lf\r\n", t2, out3);
+                i++;
+            } else {
+                    break;
+            }
         }
         
         printf("data2.datへの書き込み完了\n");
