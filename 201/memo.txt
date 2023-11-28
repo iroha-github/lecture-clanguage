@@ -1,0 +1,15 @@
+◆プログラム説明１（ロジスティック写像１，２）
+
+https://web.microsoftstream.com/video/8fa1c658-fe10-4734-aeb5-d811265d9900
+
+◆プログラム説明２（ロジスティック写像の分岐図）
+
+https://web.microsoftstream.com/video/4fef7003-97d8-481f-8df9-d60a552f81cc
+
+◆Gnuplotのインストール（自宅で作業する人用）：
+
+https://web.microsoftstream.com/video/53c34e36-ea10-4177-b1ad-e5b2e98e8830
+
+◆ Gnuplotの図保存法：
+
+https://web.microsoftstream.com/video/641b9aa3-d297-4b40-96bb-c1b5186be274
