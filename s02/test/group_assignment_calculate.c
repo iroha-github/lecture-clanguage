@@ -6,18 +6,19 @@
 #define M_PI 3.141592
 #endif
 
-int main(void) {
-    double g, dt, x0, z0, theta, dtheta, vx0, vz0, vx, vz, x, z;
+int main(void) {;
 
+    double x,z,vx0,vz0,vx,vz,theta;
     double z_min = 0.0;   // z座標初期位置
-    double z_max = 100.0; // z座標最終位置
-    double delta_z = 1.0; // z座標刻み幅
+    double z_max = 1.0; // z座標最終位置
+    double delta_z = 0.1; // z座標刻み幅
+    double z0; //z座標の仮置き変数
 
     double theta_min = 0.0; // theta初期角度
     double theta_max = 50.0; // theta最終座標
-    double delta_theta = 1.0; // theta刻み幅
+    double delta_theta = 0.01; // theta刻み幅
 
-    double delta_t = 0.1; // t刻み幅
+    double delta_t = 0.01; // t刻み幅
 
     double v0 = 10.0; // 初期速度
 
@@ -37,14 +38,13 @@ int main(void) {
             vz = vz0;
             int count = 0;
             //printf("%f %f %f\n",theta ,vx, vz);
-            do {
+            while(z>=0.0){
                 vx += 0 * delta_t;
                 x += vx * delta_t;
                 vz += Gravity * delta_t;
                 z += vz * delta_t;
                 count += 1;
-                //printf("     %d %.3f %.3f\n",count ,x, z);
-            } while (z >= 0.0);
+            }
 
             if (x_max < x) {
                 x_max = x;
@@ -53,7 +53,7 @@ int main(void) {
             
         }
 
-        printf("z=%fの時，theta=%fで最大飛距離x=%fである．\n", z0, theta_flag, x_max);
+        printf("z=%.3fの時，theta=%.3fで最大飛距離x=%.3fである．\n", z0, theta_flag, x_max);
         fprintf(fp, "%f %f\n", z0, theta_flag);
     }
 
