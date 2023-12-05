@@ -10,7 +10,11 @@
 | 書記１           | BQ23110    | 信賀晃   |         |
 | 書記２           | BQ23103    | 山田泰我 | 欠席    |
 
+<div style="page-break-before:always"></div>
+
 ![image](https://hackmd.io/_uploads/B1ceQxhHa.png)
+
+\newpage
 
 ## 仮説(運動学として解く)←信賀
 
