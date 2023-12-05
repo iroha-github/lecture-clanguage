@@ -19,7 +19,7 @@ int main(){
     t1=10.0;
 
     dt=0.1; //オイラー法の時間刻み幅
-    numi=(int)(t1-t0)/dt; //オイラー法の繰り返し回数
+    numi=(int)(t1-t0)/dt; //繰り返し回数を計算により導出→int型にキャスト
 
     t=t0; //初期時刻代入
     vz=0; //初期速度代入
@@ -42,7 +42,8 @@ int main(){
     //------------------------------------
     fprintf(gp, "plot \"viscosity.dat\" using 1:2 w l title \"Ringorous Sol.\" ,\
                       \"viscosity.dat\" using 1:3 w l title \"Terminal Velocity\"\n");
-    fprintf(gp, "set yrange[0:14] \n");
+                //厳密解と終端速度
+    fprintf(gp, "set yrange[0:14] \n"); //レンジをy軸0~14
     fprintf(gp, "replot \n");
     fflush(gp);
     //------------------------------------

@@ -25,8 +25,8 @@ int main(){
     da = 4.0/500; //daが実数型にするために4.0とする
     a0 = 0; //aの初期条件
     x0 = 0.2; //xの初期条件
-    numd = 500; //500回未満は
-    numi = 1000; //xの更新回数
+    numd = 500; //回数を指定500回
+    numi = 1000; //回数を指定1000回
     for(int i=1; i<=numa; i++){
         x = x0; //xの初期化
         for(int j=1; j<=numd; j++){
@@ -46,14 +46,6 @@ int main(){
     fprintf(gp, "plot \"LM3.dat\" with points pt 7 ps 0.01 \n");  // 1行目
     /*
     点(マーカ)の種類→pointtype(pt)
-        1: +
-        2: ×
-        3: *
-        4: □
-        5: ■
-        6: ○
-        7: ●
-
     点(マーカ)の大きさ→pointsize(ps)
 
     */
