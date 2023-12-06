@@ -10,8 +10,8 @@ int main(void) {;
 
     double x,z,vx0,vz0,vx,vz,theta;
     double z_min = 0.0;   // z座標初期位置
-    double z_max = 1.0; // z座標最終位置
-    double delta_z = 0.1; // z座標刻み幅
+    double z_max = 30.0; // z座標最終位置
+    double delta_z = 3.0; // z座標刻み幅
     double z0; //z座標の仮置き変数
 
     double theta_min = 0.0; // theta初期角度
@@ -21,6 +21,8 @@ int main(void) {;
     double delta_t = 0.01; // t刻み幅
 
     double v0 = 10.0; // 初期速度
+    double b = 2.5; // 粘性抵抗係数
+    double m = 3.0; // 質量
 
 
     FILE *fp;
@@ -41,7 +43,8 @@ int main(void) {;
             while(z>=0.0){
                 vx += 0 * delta_t;
                 x += vx * delta_t;
-                vz += Gravity * delta_t;
+                vz = vz + delta_t* (Gravity - b * vz/m);
+                //vz+dt*(g - b*vz/m)
                 z += vz * delta_t;
                 count += 1;
             }

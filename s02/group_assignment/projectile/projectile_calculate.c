@@ -10,8 +10,8 @@ int main(void) {;
 
     double x,z,vx0,vz0,vx,vz,theta;
     double z_min = 0.0;   // z座標初期位置
-    double z_max = 1.0; // z座標最終位置
-    double delta_z = 0.1; // z座標刻み幅
+    double z_max = 10.0; // z座標最終位置
+    double delta_z = 1.0; // z座標刻み幅
     double z0; //z座標の仮置き変数
 
     double theta_min = 0.0; // theta初期角度
