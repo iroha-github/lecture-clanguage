@@ -25,7 +25,7 @@ int main(void) {
 
 
     FILE *fp;
-    fp = fopen("data.dat", "r");
+    fp = fopen("d1.dat", "r");
     if (fp == NULL) {
         printf("ファイルを開けませんでした．\n");
         return 1;
@@ -48,7 +48,7 @@ int main(void) {
         count += 1;
         //printf("%f %f %f\n",theta ,vx, vz);
         char filename[20];
-        sprintf(filename, "data_%d.dat", count);
+        sprintf(filename, "data1_%d.dat", count);
 
         FILE *fp2 = fopen(filename, "w");
         if (fp2 == NULL) {

@@ -24,7 +24,7 @@ int main(void) {;
 
 
     FILE *fp;
-    fp = fopen("data.dat", "w");
+    fp = fopen("d1.dat", "w");
 
     for (z0 = z_min; z0 < z_max; z0 += delta_z) {
         double theta_flag = 0.0;

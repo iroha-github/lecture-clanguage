@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # URLを定義
-url1="https://drive.google.com/drive/u/1/folders/10_-noD0SkcMS--xg1Fqstjh-JMkt0bbn"
+url1="https://shibaura-it.zoom.us/j/94036102374?pwd=KzJYQUFPVXRKS2p4d0ZIVjVKb1JGUT09"
 
 # URL(scomb)を定義
 url2="https://scombz.shibaura-it.ac.jp/lms/course?idnumber=202303SU0445322001"
