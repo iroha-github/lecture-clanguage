@@ -159,24 +159,24 @@ $$
 図2はその結果である．
 
 @import "../s02/group_assignment/projectile/projectile_calculate.c"
-**Fig.1 Z座標と角度をパラメータとした時の，最大飛距離を求めるC言語プログラム**
+<center>Fig.1 Z座標と角度をパラメータとした時の，最大飛距離を求めるC言語プログラム</center><br>
 
 @import "../s02/group_assignment/projectile/d1.dat"
-**Fig.2 Z座標と角度をパラメータとした時の，最大飛距離を求めるC言語プログラムの実行結果**
+<center>Fig.2 Z座標と角度をパラメータとした時の，最大飛距離を求めるC言語プログラムの実行結果</center><br>
 
 #### 最大飛距離をgnuplotでプロット
 
 図3は図1のプログラムで球値した最大飛距離になるまでの軌跡をdatファイルに格納するプログラムである．datファイルは複数に出力されるので，その結果を統合してGnupplotで描画したプログラムが図4である．
 
 @import "../s02/group_assignment/projectile/projectile_resistance_plot_data.c"
-**Fig.3 最大飛距離になる時の軌跡をdatファイルに格納するプログラム**
+<center>Fig.3 最大飛距離になる時の軌跡をdatファイルに格納するプログラム</center><br>
 
 @import "../s02/group_assignment/projectile/projectile_plot_figure.c"
-**Fig.4 複数datファイルから軌跡を描くプログラム**
+<center>Fig.4 複数datファイルから軌跡を描くプログラム</center><br>
 
 図5は図4で示したプログラムにより生成されたグラフである．
 @import "../s02/group_assignment/projectile/pp1.png"
-**Fig.5 図4によって生成されたグラフ**
+<center>Fig.5 図4によって生成されたグラフ</center><br>
 
 ### 粘性抵抗を考慮して高さhを増加させる場合
 
@@ -186,28 +186,27 @@ $$
 図7はその結果である．
 @import "../s02/group_assignment/projectile/projectile_resistance_calculate.c"
 
-**Fig.6 Z座標と角度をパラメータとした時の，最大飛距離を求めるC言語プログラム**
+<center><Fig.6 Z座標と角度をパラメータとした時の，最大飛距離を求めるC言語プログラム</center><br>
 
 @import "../s02/group_assignment/projectile/d2.dat"
 
-**Fig.7 Z座標と角度をパラメータとした時の，最大飛距離を求めるC言語プログラムの実行結果**
+<center>Fig.7 Z座標と角度をパラメータとした時の，最大飛距離を求めるC言語プログラムの実行結果</center><br>
 
 #### 最大飛距離をgnuplotでプロット
 図8は図6のプログラムで球値した最大飛距離になるまでの軌跡をdatファイルに格納するプログラムである．datファイルは複数に出力されるので，その結果を統合してGnupplotで描画したプログラムが図4である．
 
 @import "../s02/group_assignment/projectile/projectile_resistance_plot_data.c"
 
-**Fig.8 最大飛距離になる時の軌跡をdatファイルに格納するプログラム**
+<center>Fig.8 最大飛距離になる時の軌跡をdatファイルに格納するプログラム</center><br>
 
 @import "../s02/group_assignment/projectile/projectile_resistance_plot_figure.c"
-**Fig.9 複数datファイルから軌跡を描くプログラム**
+<center>Fig.9 複数datファイルから軌跡を描くプログラム</center><br>
 
 図10は図9で示したプログラムにより生成されたグラフである．
 
 @import "../s02/group_assignment/projectile/pp2.png"
-**Fig.10 図4によって生成されたグラフ**
+<center>Fig.10 図4によって生成されたグラフ</center>
 
-## 考察
 
-仮説の章で論じた通り，計算が難しいものも，結果の章で示した通り，計算できた．
-オイラー法の有用性を感じられた．
+|仮説で論じた通り，計算が難しいものも，オイラー法により計算できた．
+|:--|
