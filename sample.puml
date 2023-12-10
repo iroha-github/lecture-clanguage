@@ -1,0 +1,44 @@
+@startuml sample
+
+skinparam shadowing false
+autonumber
+
+participant "い" as a
+participant "ろ" as b
+participant "は" as c
+participant "に" as d
+
+a -> b : 同期
+activate a
+    activate b
+        b-->c : 非同期
+        activate c
+            b->b : **太字**
+            activate b
+                loop ループ
+                    c->c: __下線__
+                end
+
+                ref over c: リファレンス\n（更に詳しい情報は XXX を参照等）
+
+                alt IF 分岐
+                    c->c: 処理
+                    else 別の条件
+                    c->c: 処理
+                end
+
+                c-->b : 非同期処理の\n完了
+            deactivate b
+        deactivate c
+    b->a : 処理完了
+    deactivate b
+    create d
+    a->d : 作成
+a->a: 完了処理
+deactivate a
+
+note over a: Note A
+note left b: Note B
+note right c: Note C
+
+@enduml
