@@ -16,4 +16,4 @@ void loop() {
         var = (1023 - in_val) / 2;
     }
     analogWrite(MOTOR, var);
-}
+}d
