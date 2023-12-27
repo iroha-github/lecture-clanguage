@@ -95,7 +95,7 @@ int main() {
     FILE *gp;
     gp = popen("gnuplot -persist", "w");
 
-    // Gnuplot script
+    // Gnuplotのコマンドを送る
     const char *gnuplotScript =\
 		"set terminal gif animate delay 5 optimize size 640,480\n"
 		"set output 'CoupledVibrationMid_anime_3.gif'\n"
@@ -106,9 +106,9 @@ int main() {
 		"}\n"
 		"unset output\n";
 
-    // Send Gnuplot script to the Gnuplot process
+    // Gnuplotのプロセスにコマンドを送る
     fprintf(gp, "%s", gnuplotScript);
 
-    // Close Gnuplot process
+    // プロセスを閉じる
     pclose(gp);
 }

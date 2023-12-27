@@ -1,3 +1,7 @@
+/*
+情報処理演習Ⅱ 個人課題5-3オプション
+（多自由度連成振動のシミュレーション）
+*/
 
 #include <stdio.h>
 #include <math.h>
@@ -139,8 +143,8 @@ int main() {
 	*/
 
 
-	const char *gnuplotScript =\
-		"set terminal gif animate delay 5 optimize size 640,480\n"
+	const char *gnuplotscript =\
+        "set terminal gif animate delay 5 optimize size 640,480\n"
 		"set output 'CoupledVibrationMid_anime_5.gif'\n"
 		"set title 'CoupledVibrationMid gif animation 5 degrees of freedom'\n"
 		"do for [i=0:99] {\n"
@@ -153,7 +157,7 @@ int main() {
 		"unset output\n";
 
 	// Send Gnuplot script to the Gnuplot process
-	fprintf(gp, "%s", gnuplotScript);
+	fprintf(gp, "%s", gnuplotscript);
 
 	// Close Gnuplot process
 	pclose(gp);

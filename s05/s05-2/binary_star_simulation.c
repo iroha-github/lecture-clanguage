@@ -61,8 +61,14 @@ int main(){
 
     dt = 0.001; //中点法の時間の刻み幅
     nint = (t1-t0)/dt;
+
+    FILE *fp;
+    fp = fopen("binary_star_simulation.dat", "w");
+
     for(i=1; i<=nint; i++){
-        printf("%f %f %f %f %f %f\n", x1, y1, x2, y2, cgx(x1, y1, x2, y2), cgy(x1, y1, x2, y2));
+        if(i%300 == 0){
+            fprintf(fp,"%f %f %f %f %f %f\n", x1, y1, x2, y2, cgx(x1, y1, x2, y2), cgy(x1, y1, x2, y2));
+        }
         k1x = x1 + dt/2*vx1;
         k1y = y1 + dt/2*vy1;
         k1vx = vx1 + dt/2*(grax(x1, y1, x2, y2))/m1;
@@ -83,8 +89,34 @@ int main(){
         vx2 = vx2 + dt*(grax(k2x, k2y, k1x, k1y))/m2;
         vy2 = vy2 + dt*(gray(k2x, k2y, k1x, k1y))/m2;
     }
-}
 
-/*
-plot "binary_star_simulation.dat" u 1:2 w l ,"binary_star_simulation.dat" u 3:4 w l, "binary_star_simulation.dat" u 5:6 w l
-*/ 
+    fflush(fp);
+    fclose(fp);
+
+    // 新たにgnuplotのプロセスを立ち上げるポインタを定義
+    FILE *gp;
+    gp = popen("gnuplot -persist", "w");
+
+    // Gnuplotに送るコマンドを定義
+    char *gnuplotscript =\
+        "set terminal gif animate delay 5 optimize size 640,480\n"
+        "set output \"binary_star_simulation.gif\"\n"
+        "set title \"binary star simulation\"\n"
+        "do for [i=0:99] {\n"
+        "plot [-12:3][-6:5]\"binary_star_simulation.dat\" every ::i::i using 1:2 w p pt 7 ps 1 title \"Point mass 1\",\\\n"
+        "                  \"binary_star_simulation.dat\" every ::i::i using 3:4 w p pt 7 ps 1 title \"Point mass 2\",\\\n"
+        "                  \"binary_star_simulation.dat\" every ::i::i using 5:6 w p pt 7 ps 1 title \"The center of gravity\", \\\n"
+        "                  \"binary_star_simulation.dat\" using 1:2 w l title \"Point mass 1 with line\", \\\n"
+        "                  \"binary_star_simulation.dat\" using 3:4 w l title \"Point mass 2 with line\", \\\n"
+        "                  \"binary_star_simulation.dat\" using 5:6 w l title \"The center of gravity with line\"\n"
+        "}\n"
+        "unset output\n";  //明示的に終了
+
+    // Gnuplotのプロセスにコマンドを送る
+    fprintf(gp, "%s", gnuplotscript);
+
+    // プロセスを閉じる
+    pclose(gp);
+
+    return 0;
+}
