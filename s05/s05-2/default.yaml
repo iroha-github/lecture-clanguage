@@ -1,0 +1,46 @@
+# 入力ファイル (配列形式で指定)
+input-files:
+- pandoc_binary_star_simulation.md
+
+# 出力ファイル (単一アイテムで指定)
+output-file: グループ課題5-2_16班.拡張子.pdf
+
+# --pdf-engine オプション
+pdf-engine: lualatex
+
+# コードブロックを変更
+listings: true
+
+include-in-header:
+- code-header.tex
+
+# 章に番号を付ける
+number-sections: true
+
+# pandoc-crossref を使う(順番は大事らしい)
+filters:
+- pandoc-crossref
+
+# コードブロックのスタイル
+highlight-style: tango
+
+# テンプレート変数
+variables:  
+  #documentclass: bxjsarticle
+  documentclass: ltjsarticle
+  luatexjapresetoptions: SourceHanSerifJP-Medium
+  indent: true
+
+metadata:    
+  listings: true
+  documentclass: ltjsarticle
+  geometry: a4paper
+  geometry: margin=2cm
+  figureTitle: "図"
+  tableTitle: "表"
+  listingTitle: "コード"
+  figPrefix: "図"
+  eqnPrefix: "式"
+  tblPrefix: "表"
+  lstPrefix: "コード"
+
