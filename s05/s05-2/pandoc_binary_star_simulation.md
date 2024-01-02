@@ -114,7 +114,7 @@ $$
 
 以下の[@lst:code]のプログラムが検証に用いたプログラムである．中点法を用いている．
 
-```{.c #lst:code caption="binary_star_simulation.c"}
+```{#lst:code .c  caption="binary_star_simulation.c"}
 /*
 情報処理演習Ⅱ グループ課題5-2
 連星シミュレーション
