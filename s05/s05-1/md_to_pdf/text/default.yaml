@@ -1,6 +1,6 @@
 # 入力ファイル (配列形式で指定)
 input-files:
-- 05file.md
+- 05-1file.md
 
 # 出力ファイル (単一アイテムで指定)
 output-file: BQ23107-窪田大輝-課題5-1.pdf
@@ -8,7 +8,7 @@ output-file: BQ23107-窪田大輝-課題5-1.pdf
 # --pdf-engine オプション
 pdf-engine: lualatex
 
-# コードブロックを変更(これは必要なのか)
+# コードブロックを変更(これは必要なのか？よくわからん)
 listings: true
 
 include-in-header:
@@ -21,7 +21,7 @@ number-sections: true
 filters:
 - pandoc-crossref
 
-# コードブロックのスタイル
+# コードブロックのスタイル→header.texを指定しているので，実質無視
 highlight-style: tango
 
 # 目次を出力する
@@ -40,7 +40,7 @@ variables:
   - margin=2cm
 
 metadata:
-  # ここでちゃんとlistings: trueを指定しないと、コードブロックが出力されない
+  # ここでちゃんとlistings: trueを指定しないと、コードブロックで"コード 1"と出力されない
   listings: true
   documentclass: ltjsarticle 
   figureTitle: "図"

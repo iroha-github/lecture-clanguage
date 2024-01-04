@@ -5,7 +5,7 @@ author: "BQ23107 窪田 大輝"
 # date: "2024-01-01"
 ---
 
-TOC
+\newpage
 
 # 概要
 
@@ -184,11 +184,11 @@ int main() {
 [@lst:coupled_vibration_compare.c]のプログラムを実行した結果を以下に示す。
 [@fig:cvc_dt_01]，[@fig:cvc_dt_001]，[@fig:cvc_dt_0001]はそれぞれ$\Delta t=0.1$，$\Delta t=0.01$，$\Delta t=0.001$のときの結果である。
 
-![$\Delta t=0.1$のときの連成振動の厳密解，オイラー法，中点法の比較](CoupledVibrationCompare_dt=0.1.png){#fig:cvc_dt_01 width=55%}
+![$\Delta t=0.1$のときの連成振動の厳密解，オイラー法，中点法の比較](CoupledVibrationCompare_dt=0.1.png){#fig:cvc_dt_01 width=60%}
 
-![$\Delta t=0.01$のときの連成振動の厳密解，オイラー法，中点法の比較](CoupledVibrationCompare_dt=0.01.png){#fig:cvc_dt_001 width=55%}
+![$\Delta t=0.01$のときの連成振動の厳密解，オイラー法，中点法の比較](CoupledVibrationCompare_dt=0.01.png){#fig:cvc_dt_001 width=60%}
 
-![$\Delta t=0.001$のときの連成振動の厳密解，オイラー法，中点法の比較](CoupledVibrationCompare_dt=0.001.png){#fig:cvc_dt_0001 width=55%}
+![$\Delta t=0.001$のときの連成振動の厳密解，オイラー法，中点法の比較](CoupledVibrationCompare_dt=0.001.png){#fig:cvc_dt_0001 width=60%}
 
 # 考察(時間刻み幅$\Delta t$を変化させたときの比較)
 [@fig:cvc_dt_01]，[@fig:cvc_dt_001]，[@fig:cvc_dt_0001]を比較すると，$\Delta t$が小さいほど誤差の小さい結果が得られていることがわかる。特に$\Delta t=0.1$の時，厳密解と比較してオイラー法の結果がズレていることがわかる．しかし，中点法はオイラーとほぼ一致していることが確認できる．
@@ -543,9 +543,12 @@ int main() {
 [@lst:coupled_vibration_mode.c]のプログラムを実行した結果を以下に示す。
 [@fig:cvm_mode1]，[@fig:cvm_mode2]はそれぞれモード1，モード2のときの結果である。
 
-![モード1のときの運動の再現](CoupledVibrationMid_mode1.png){#fig:cvm_mode1 height=35%}
+\clearpage
 
-![モード2のときの運動の再現](CoupledVibrationMid_mode2.png){#fig:cvm_mode2 height=35%}
+![モード1のときの運動の再現](CoupledVibrationMid_mode1.png){#fig:cvm_mode1 height=33%}
+
+![モード2のときの運動の再現](CoupledVibrationMid_mode2.png){#fig:cvm_mode2 height=33%}
+
 
 # 考察(モード1,モード2の再現)
 [@fig:cvm_mode1]，[@fig:cvm_mode2]を比較すると，モード1のときは質点1と質点2が同じ方向に振動していることがわかる．一方，モード2のときは質点1と質点2が逆方向に振動していることがわかる．それぞれ同位相と逆位相になっていることがわかる．よって，[@lst:coupled_vibration_mode.c]のプログラムは正しくモード1，モード2の運動を再現できているといえる．

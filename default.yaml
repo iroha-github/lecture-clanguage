@@ -1,0 +1,291 @@
+<table>
+<thead>
+<tr class="header">
+<th>役職</th>
+<th>学籍番号</th>
+<th>名前</th>
+<th>備考</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>リーダー</td>
+<td>BQ23107</td>
+<td>窪田 大輝</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>プログラムリーダー</td>
+<td>BQ23008</td>
+<td>脇家 優太</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>企画係</td>
+<td>BQ23071</td>
+<td>平川 奨</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>連絡係</td>
+<td>BQ23060</td>
+<td>塚田 水月</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>書記１</td>
+<td>BQ23110</td>
+<td>信賀 晃</td>
+<td>欠席</td>
+</tr>
+<tr class="even">
+<td>書記２</td>
+<td>BQ23103</td>
+<td>山田 泰我</td>
+<td>欠席</td>
+</tr>
+</tbody>
+</table>
+<h1 id="概要">概要</h1>
+<h2 id="連星とは">連星とは</h2>
+<p>連星とは、2つの恒星が互いに万有引力により結びつき，それぞれ楕円軌道を描くものである．</p>
+<h2 id="連星の運動方程式">連星の運動方程式</h2>
+<figure id="fig:Schematic_diagram_of_binary_stars">
+<img src="image-2.png" style="height:45.0%" alt="連星の模式図" />
+<figcaption aria-hidden="true">連星の模式図</figcaption>
+</figure>
+<p><span class="citation"
+data-cites="fig:Schematic_diagram_of_binary_stars">[@fig:Schematic_diagram_of_binary_stars]</span>に連星の模式図を示す．
+質点1,2をデカルト座標系で表す．それぞれの質点1,2に対して，万有引力の法則より質点1にかかる力は質点2から，質点2にかかる力は質点1からとなる．</p>
+<p><span class="math inline">$|\vec{F}_{1 \to 2}|=|\vec{F}_{2 \to
+1}|=G\frac{m_1m_2}{r^2}$</span> <span
+class="math inline"><em>F⃗</em><sub>1 → 2</sub> =  − <em>F⃗</em><sub>2 → 1</sub></span></p>
+<p>質点1の位置ベクトル<span
+class="math inline">$\vec{r_1}=(\vec{x_1},\vec{y_1})$</span>，質点2の位置ベクトル<span
+class="math inline">$\vec{r_2}=(\vec{x_2},\vec{y_2})$</span>とする．</p>
+<p>運動方程式を立てると，</p>
+<p><span class="math display">$$
+    \begin{cases}
+        m_1 \ddot{r}_1 &amp;= \vec{F}_{1 \to 2} \\
+        m_2 \ddot{r}_2 &amp;= \vec{F}_{2 \to 1}
+    \end{cases} \\
+    \Leftrightarrow \quad
+    \begin{aligned}
+        &amp;\begin{cases}
+            m_1 \ddot{x}_1 &amp;= (\vec{F}_{1 \to 2})_x \\
+            m_1 \ddot{y}_1 &amp;= (\vec{F}_{1 \to 2})_y
+        \end{cases} \\
+        &amp;\begin{cases}
+            m_2 \ddot{x}_2 &amp;= (\vec{F}_{2 \to 1})_x \\
+            m_2 \ddot{y}_2 &amp;= (\vec{F}_{2 \to 1})_y
+        \end{cases}
+    \end{aligned}
+$$</span></p>
+<p>ここで、質点1と質点2の位置ベクトルの差を <span
+class="math display">$$\vec{r_{12}}=\vec{r_2}-\vec{r_1}$$</span>とすると，<span
+class="math inline">$\vec{F_{1 \to 2}} / \! /
+\vec{r_{12}}$</span>となり，単位ベクトルを<span
+class="math inline"><em>e⃗</em></span>とすると <span
+class="math display">$$
+\vec{F_{1 \to 2}}=|\vec{F_{1 \to 2}}|\vec{e}
+$$</span> ベクトルの規格化<span
+class="math inline">$\vec{e}=\frac{\vec{r_{12}}}{|\vec{r_{12}}|}$</span>を行い，<span
+class="math inline">$|\vec{F}_{1 \to 2}|=|\vec{F}_{2 \to
+1}|=G\frac{m_1m_2}{r^2}$</span>とすると</p>
+<p><span class="math display">$$
+\vec{F_{1 \to 2}} = |\vec{F_{1 \to
+2}}|\frac{\vec{r_{12}}}{|\vec{r_{12}}|} = G\frac{m_1
+m_2}{r^2}\frac{\vec{r_{12}}}{|\vec{r_{12}}|} = G\frac{m_1 m_2
+}{r^3}(\vec{r_2}-\vec{r_1})
+$$</span></p>
+<!-- \begin{align*}
+\vec{F_{1 \to 2}} &= |\vec{F_{1 \to 2}}|\frac{\vec{r_{12}}}{|\vec{r_{12}}|} \\
+&= G\frac{m_1 m_2}{r^2}\frac{\vec{r_{12}}}{|\vec{r_{12}}|} \\
+&= G\frac{m_1 m_2 }{r^3}(\vec{r_2}-\vec{r_1})
+\end{align*} -->
+<p>よって</p>
+<p><span class="math display">$$
+    \begin{cases}
+        m_1 \ddot{x_1}=G\frac{m_1 m_2 }{r^3}(x_2-x_1) \\
+        m_1 \ddot{y_1}=G\frac{m_1 m_2 }{r^3}(y_2-y_1) \\
+    \end{cases}\\
+$$</span></p>
+<p>また，質点2に働く力は質点1に働く力は逆向きであるから，</p>
+<p><span class="math display">$$
+    \begin{cases}
+        m_2 \ddot{x_2}=-G\frac{m_1 m_2 }{r^3}(x_2-x_1) \\
+        m_2 \ddot{y_2}=-G\frac{m_1 m_2 }{r^3}(y_2-y_1) \\
+    \end{cases}\\
+$$</span></p>
+<p>となる．</p>
+<h2 id="重心">重心</h2>
+<p>重心は，質量の重み付き平均で表される． 質点1,2の重心を<span
+class="math inline">$\vec{r_g}$</span>とすると(考え方：重心周りのモーメントは0になる)，</p>
+<p><span class="math display">$$
+    \vec{r_g}=\frac{m_1 \vec{r_1}+m_2 \vec{r_2}}{m_1+m_2}
+$$</span></p>
+<p>この時x,y成分はそれぞれ <span class="math display">$$
+\begin{cases}
+    (\vec{r_g})_x=\frac{m_1 x_1+m_2 x_2}{m_1+m_2} \\
+    (\vec{r_g})_y=\frac{m_1 y_1+m_2 y_2}{m_1+m_2}
+\end{cases}
+$$</span></p>
+<h1 id="検証">検証</h1>
+<p>以下の<span class="citation"
+data-cites="lst:code">[@lst:code]</span>のプログラムが検証に用いたプログラムである．中点法を用いている．</p>
+<div class="sourceCode" id="lst:code"
+data-caption="binary_star_simulation.c"><pre
+class="sourceCode c"><code class="sourceCode c"><span id="lst:code-1"><a href="#lst:code-1" aria-hidden="true" tabindex="-1"></a><span class="co">/*</span></span>
+<span id="lst:code-2"><a href="#lst:code-2" aria-hidden="true" tabindex="-1"></a><span class="co">情報処理演習Ⅱ グループ課題5-2</span></span>
+<span id="lst:code-3"><a href="#lst:code-3" aria-hidden="true" tabindex="-1"></a><span class="co">連星シミュレーション</span></span>
+<span id="lst:code-4"><a href="#lst:code-4" aria-hidden="true" tabindex="-1"></a><span class="co">*/</span></span>
+<span id="lst:code-5"><a href="#lst:code-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst:code-6"><a href="#lst:code-6" aria-hidden="true" tabindex="-1"></a><span class="pp">#include</span><span class="im">&lt;stdio.h&gt;</span></span>
+<span id="lst:code-7"><a href="#lst:code-7" aria-hidden="true" tabindex="-1"></a><span class="pp">#include</span><span class="im">&lt;math.h&gt;</span></span>
+<span id="lst:code-8"><a href="#lst:code-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst:code-9"><a href="#lst:code-9" aria-hidden="true" tabindex="-1"></a><span class="dt">const</span> <span class="dt">double</span> m1 <span class="op">=</span> <span class="fl">1.0</span><span class="op">;</span> <span class="co">// 質点1の質量</span></span>
+<span id="lst:code-10"><a href="#lst:code-10" aria-hidden="true" tabindex="-1"></a><span class="dt">const</span> <span class="dt">double</span> m2 <span class="op">=</span> <span class="fl">2.0</span><span class="op">;</span> <span class="co">// 質点2の質量</span></span>
+<span id="lst:code-11"><a href="#lst:code-11" aria-hidden="true" tabindex="-1"></a><span class="dt">const</span> <span class="dt">double</span> G <span class="op">=</span> <span class="fl">10.0</span><span class="op">;</span> <span class="co">// 描画しやすいような値にする</span></span>
+<span id="lst:code-12"><a href="#lst:code-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst:code-13"><a href="#lst:code-13" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> r<span class="op">(</span><span class="dt">double</span> x1<span class="op">,</span> <span class="dt">double</span> y1<span class="op">,</span> <span class="dt">double</span> x2<span class="op">,</span> <span class="dt">double</span> y2<span class="op">)</span> <span class="op">{</span> <span class="co">//質点1と質点2の距離</span></span>
+<span id="lst:code-14"><a href="#lst:code-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> sqrt<span class="op">(</span>pow<span class="op">(</span>x1<span class="op">-</span>x2<span class="op">,</span> <span class="dv">2</span><span class="op">)</span> <span class="op">+</span> pow<span class="op">(</span>y1<span class="op">-</span>y2<span class="op">,</span> <span class="dv">2</span><span class="op">));</span></span>
+<span id="lst:code-15"><a href="#lst:code-15" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="lst:code-16"><a href="#lst:code-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst:code-17"><a href="#lst:code-17" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> grax<span class="op">(</span><span class="dt">double</span> x1<span class="op">,</span> <span class="dt">double</span> y1<span class="op">,</span> <span class="dt">double</span> x2<span class="op">,</span> <span class="dt">double</span> y2<span class="op">)</span> <span class="op">{</span> <span class="co">//質点1と質点2のx方向の引力</span></span>
+<span id="lst:code-18"><a href="#lst:code-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> G<span class="op">*</span>m1<span class="op">*</span>m2<span class="op">*(</span>x2<span class="op">-</span>x1<span class="op">)</span> <span class="op">/</span> <span class="op">(</span>pow<span class="op">(</span>r<span class="op">(</span>x1<span class="op">,</span> y1<span class="op">,</span> x2<span class="op">,</span> y2<span class="op">),</span> <span class="dv">3</span><span class="op">));</span> </span>
+<span id="lst:code-19"><a href="#lst:code-19" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="lst:code-20"><a href="#lst:code-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst:code-21"><a href="#lst:code-21" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> gray<span class="op">(</span><span class="dt">double</span> x1<span class="op">,</span> <span class="dt">double</span> y1<span class="op">,</span> <span class="dt">double</span> x2<span class="op">,</span> <span class="dt">double</span> y2<span class="op">)</span> <span class="op">{</span> <span class="co">//質点1と質点2のy方向の引力</span></span>
+<span id="lst:code-22"><a href="#lst:code-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> G<span class="op">*</span>m1<span class="op">*</span>m2<span class="op">*(</span>y2<span class="op">-</span>y1<span class="op">)</span> <span class="op">/</span> <span class="op">(</span>pow<span class="op">(</span>r<span class="op">(</span>x1<span class="op">,</span> y1<span class="op">,</span> x2<span class="op">,</span> y2<span class="op">),</span> <span class="dv">3</span><span class="op">));</span></span>
+<span id="lst:code-23"><a href="#lst:code-23" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="lst:code-24"><a href="#lst:code-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst:code-25"><a href="#lst:code-25" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> cgx<span class="op">(</span><span class="dt">double</span> x1<span class="op">,</span> <span class="dt">double</span> y1<span class="op">,</span> <span class="dt">double</span> x2<span class="op">,</span> <span class="dt">double</span> y2<span class="op">){</span> <span class="co">//重心点を表すx方向の関数</span></span>
+<span id="lst:code-26"><a href="#lst:code-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="op">(</span>m1<span class="op">*</span>x1<span class="op">+</span>m2<span class="op">*</span>x2<span class="op">)/(</span>m1<span class="op">+</span>m2<span class="op">);</span></span>
+<span id="lst:code-27"><a href="#lst:code-27" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="lst:code-28"><a href="#lst:code-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst:code-29"><a href="#lst:code-29" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> cgy<span class="op">(</span><span class="dt">double</span> x1<span class="op">,</span> <span class="dt">double</span> y1<span class="op">,</span> <span class="dt">double</span> x2<span class="op">,</span> <span class="dt">double</span> y2<span class="op">){</span> <span class="co">//重心点を表すy方向の関数</span></span>
+<span id="lst:code-30"><a href="#lst:code-30" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="op">(</span>m1<span class="op">*</span>y1<span class="op">+</span>m2<span class="op">*</span>y2<span class="op">)/(</span>m1<span class="op">+</span>m2<span class="op">);</span></span>
+<span id="lst:code-31"><a href="#lst:code-31" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="lst:code-32"><a href="#lst:code-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst:code-33"><a href="#lst:code-33" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(){</span></span>
+<span id="lst:code-34"><a href="#lst:code-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst:code-35"><a href="#lst:code-35" aria-hidden="true" tabindex="-1"></a>    <span class="dt">double</span> t0<span class="op">,</span>t1<span class="op">,</span>x10<span class="op">,</span>x20<span class="op">,</span>vx10<span class="op">,</span>vx20<span class="op">,</span>y10<span class="op">,</span>y20<span class="op">,</span>vy10<span class="op">,</span>vy20<span class="op">,</span>x1<span class="op">,</span>x2<span class="op">,</span>vx1<span class="op">,</span>vx2<span class="op">,</span>y1<span class="op">,</span>y2<span class="op">,</span>vy1<span class="op">,</span>vy2<span class="op">,</span>vmax<span class="op">,</span>dt<span class="op">;</span></span>
+<span id="lst:code-36"><a href="#lst:code-36" aria-hidden="true" tabindex="-1"></a>    <span class="dt">double</span> k1x<span class="op">,</span>k1y<span class="op">,</span>k1vx<span class="op">,</span>k1vy<span class="op">,</span>k2x<span class="op">,</span>k2y<span class="op">,</span>k2vx<span class="op">,</span>k2vy<span class="op">;</span></span>
+<span id="lst:code-37"><a href="#lst:code-37" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> i<span class="op">,</span>nint<span class="op">;</span></span>
+<span id="lst:code-38"><a href="#lst:code-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst:code-39"><a href="#lst:code-39" aria-hidden="true" tabindex="-1"></a>    t0 <span class="op">=</span> <span class="fl">0.0</span><span class="op">;</span> <span class="co">//初期時刻</span></span>
+<span id="lst:code-40"><a href="#lst:code-40" aria-hidden="true" tabindex="-1"></a>    t1 <span class="op">=</span> <span class="fl">30.0</span><span class="op">;</span> <span class="co">//終了時刻</span></span>
+<span id="lst:code-41"><a href="#lst:code-41" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="lst:code-42"><a href="#lst:code-42" aria-hidden="true" tabindex="-1"></a>    x10 <span class="op">=</span> <span class="fl">2.0</span><span class="op">;</span></span>
+<span id="lst:code-43"><a href="#lst:code-43" aria-hidden="true" tabindex="-1"></a>    y10 <span class="op">=</span> <span class="fl">0.0</span><span class="op">;</span></span>
+<span id="lst:code-44"><a href="#lst:code-44" aria-hidden="true" tabindex="-1"></a>    vx10 <span class="op">=</span> <span class="fl">1.0</span><span class="op">;</span></span>
+<span id="lst:code-45"><a href="#lst:code-45" aria-hidden="true" tabindex="-1"></a>    vy10 <span class="op">=</span> <span class="op">-</span><span class="fl">2.0</span><span class="op">;</span></span>
+<span id="lst:code-46"><a href="#lst:code-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst:code-47"><a href="#lst:code-47" aria-hidden="true" tabindex="-1"></a>    x20 <span class="op">=</span> <span class="op">-</span><span class="fl">1.0</span><span class="op">;</span></span>
+<span id="lst:code-48"><a href="#lst:code-48" aria-hidden="true" tabindex="-1"></a>    y20 <span class="op">=</span> <span class="op">-</span><span class="fl">1.0</span><span class="op">;</span></span>
+<span id="lst:code-49"><a href="#lst:code-49" aria-hidden="true" tabindex="-1"></a>    vx20 <span class="op">=</span> <span class="op">-</span><span class="fl">1.0</span><span class="op">;</span></span>
+<span id="lst:code-50"><a href="#lst:code-50" aria-hidden="true" tabindex="-1"></a>    vy20 <span class="op">=</span> <span class="fl">1.0</span><span class="op">;</span></span>
+<span id="lst:code-51"><a href="#lst:code-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst:code-52"><a href="#lst:code-52" aria-hidden="true" tabindex="-1"></a>    x1 <span class="op">=</span> x10<span class="op">;</span></span>
+<span id="lst:code-53"><a href="#lst:code-53" aria-hidden="true" tabindex="-1"></a>    x2 <span class="op">=</span> x20<span class="op">;</span></span>
+<span id="lst:code-54"><a href="#lst:code-54" aria-hidden="true" tabindex="-1"></a>    y1 <span class="op">=</span> y10<span class="op">;</span></span>
+<span id="lst:code-55"><a href="#lst:code-55" aria-hidden="true" tabindex="-1"></a>    y2 <span class="op">=</span> y20<span class="op">;</span></span>
+<span id="lst:code-56"><a href="#lst:code-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst:code-57"><a href="#lst:code-57" aria-hidden="true" tabindex="-1"></a>    vx1 <span class="op">=</span> vx10<span class="op">;</span></span>
+<span id="lst:code-58"><a href="#lst:code-58" aria-hidden="true" tabindex="-1"></a>    vx2 <span class="op">=</span> vx20<span class="op">;</span></span>
+<span id="lst:code-59"><a href="#lst:code-59" aria-hidden="true" tabindex="-1"></a>    vy1 <span class="op">=</span> vy10<span class="op">;</span></span>
+<span id="lst:code-60"><a href="#lst:code-60" aria-hidden="true" tabindex="-1"></a>    vy2 <span class="op">=</span> vy20<span class="op">;</span></span>
+<span id="lst:code-61"><a href="#lst:code-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst:code-62"><a href="#lst:code-62" aria-hidden="true" tabindex="-1"></a>    dt <span class="op">=</span> <span class="fl">0.001</span><span class="op">;</span> <span class="co">//中点法の時間の刻み幅</span></span>
+<span id="lst:code-63"><a href="#lst:code-63" aria-hidden="true" tabindex="-1"></a>    nint <span class="op">=</span> <span class="op">(</span>t1<span class="op">-</span>t0<span class="op">)/</span>dt<span class="op">;</span></span>
+<span id="lst:code-64"><a href="#lst:code-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst:code-65"><a href="#lst:code-65" aria-hidden="true" tabindex="-1"></a>    <span class="dt">FILE</span> <span class="op">*</span>fp<span class="op">;</span></span>
+<span id="lst:code-66"><a href="#lst:code-66" aria-hidden="true" tabindex="-1"></a>    fp <span class="op">=</span> fopen<span class="op">(</span><span class="st">&quot;binary_star_simulation.dat&quot;</span><span class="op">,</span> <span class="st">&quot;w&quot;</span><span class="op">);</span></span>
+<span id="lst:code-67"><a href="#lst:code-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst:code-68"><a href="#lst:code-68" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span><span class="op">(</span>i<span class="op">=</span><span class="dv">1</span><span class="op">;</span> i<span class="op">&lt;=</span>nint<span class="op">;</span> i<span class="op">++){</span></span>
+<span id="lst:code-69"><a href="#lst:code-69" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span><span class="op">(</span>i<span class="op">%</span><span class="dv">300</span> <span class="op">==</span> <span class="dv">0</span><span class="op">){</span></span>
+<span id="lst:code-70"><a href="#lst:code-70" aria-hidden="true" tabindex="-1"></a>            fprintf<span class="op">(</span>fp<span class="op">,</span><span class="st">&quot;</span><span class="sc">%f</span><span class="st"> </span><span class="sc">%f</span><span class="st"> </span><span class="sc">%f</span><span class="st"> </span><span class="sc">%f</span><span class="st"> </span><span class="sc">%f</span><span class="st"> </span><span class="sc">%f\n</span><span class="st">&quot;</span><span class="op">,</span> x1<span class="op">,</span> y1<span class="op">,</span> x2<span class="op">,</span> y2<span class="op">,</span> cgx<span class="op">(</span>x1<span class="op">,</span> y1<span class="op">,</span> x2<span class="op">,</span> y2<span class="op">),</span> cgy<span class="op">(</span>x1<span class="op">,</span> y1<span class="op">,</span> x2<span class="op">,</span> y2<span class="op">));</span></span>
+<span id="lst:code-71"><a href="#lst:code-71" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="lst:code-72"><a href="#lst:code-72" aria-hidden="true" tabindex="-1"></a>        k1x <span class="op">=</span> x1 <span class="op">+</span> dt<span class="op">/</span><span class="dv">2</span><span class="op">*</span>vx1<span class="op">;</span></span>
+<span id="lst:code-73"><a href="#lst:code-73" aria-hidden="true" tabindex="-1"></a>        k1y <span class="op">=</span> y1 <span class="op">+</span> dt<span class="op">/</span><span class="dv">2</span><span class="op">*</span>vy1<span class="op">;</span></span>
+<span id="lst:code-74"><a href="#lst:code-74" aria-hidden="true" tabindex="-1"></a>        k1vx <span class="op">=</span> vx1 <span class="op">+</span> dt<span class="op">/</span><span class="dv">2</span><span class="op">*(</span>grax<span class="op">(</span>x1<span class="op">,</span> y1<span class="op">,</span> x2<span class="op">,</span> y2<span class="op">))/</span>m1<span class="op">;</span></span>
+<span id="lst:code-75"><a href="#lst:code-75" aria-hidden="true" tabindex="-1"></a>        k1vy <span class="op">=</span> vy1 <span class="op">+</span> dt<span class="op">/</span><span class="dv">2</span><span class="op">*(</span>gray<span class="op">(</span>x1<span class="op">,</span> y1<span class="op">,</span> x2<span class="op">,</span> y2<span class="op">))/</span>m1<span class="op">;</span></span>
+<span id="lst:code-76"><a href="#lst:code-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst:code-77"><a href="#lst:code-77" aria-hidden="true" tabindex="-1"></a>        k2x <span class="op">=</span> x2 <span class="op">+</span> dt<span class="op">/</span><span class="dv">2</span><span class="op">*</span>vx2<span class="op">;</span></span>
+<span id="lst:code-78"><a href="#lst:code-78" aria-hidden="true" tabindex="-1"></a>        k2y <span class="op">=</span> y2 <span class="op">+</span> dt<span class="op">/</span><span class="dv">2</span><span class="op">*</span>vy2<span class="op">;</span></span>
+<span id="lst:code-79"><a href="#lst:code-79" aria-hidden="true" tabindex="-1"></a>        k2vx <span class="op">=</span> vx2 <span class="op">+</span> dt<span class="op">/</span><span class="dv">2</span><span class="op">*(</span>grax<span class="op">(</span>x2<span class="op">,</span> y2<span class="op">,</span> x1<span class="op">,</span> y1<span class="op">))/</span>m2<span class="op">;</span></span>
+<span id="lst:code-80"><a href="#lst:code-80" aria-hidden="true" tabindex="-1"></a>        k2vy <span class="op">=</span> vy2 <span class="op">+</span> dt<span class="op">/</span><span class="dv">2</span><span class="op">*(</span>gray<span class="op">(</span>x2<span class="op">,</span> y2<span class="op">,</span> x1<span class="op">,</span> y1<span class="op">))/</span>m2<span class="op">;</span></span>
+<span id="lst:code-81"><a href="#lst:code-81" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="lst:code-82"><a href="#lst:code-82" aria-hidden="true" tabindex="-1"></a>        x1 <span class="op">=</span> x1 <span class="op">+</span> dt<span class="op">*</span>k1vx<span class="op">;</span></span>
+<span id="lst:code-83"><a href="#lst:code-83" aria-hidden="true" tabindex="-1"></a>        y1 <span class="op">=</span> y1 <span class="op">+</span> dt<span class="op">*</span>k1vy<span class="op">;</span></span>
+<span id="lst:code-84"><a href="#lst:code-84" aria-hidden="true" tabindex="-1"></a>        vx1 <span class="op">=</span> vx1 <span class="op">+</span> dt<span class="op">*(</span>grax<span class="op">(</span>k1x<span class="op">,</span> k1y<span class="op">,</span> k2x<span class="op">,</span> k2y<span class="op">))/</span>m1<span class="op">;</span></span>
+<span id="lst:code-85"><a href="#lst:code-85" aria-hidden="true" tabindex="-1"></a>        vy1 <span class="op">=</span> vy1 <span class="op">+</span> dt<span class="op">*(</span>gray<span class="op">(</span>k1x<span class="op">,</span> k1y<span class="op">,</span> k2x<span class="op">,</span> k2y<span class="op">))/</span>m1<span class="op">;</span></span>
+<span id="lst:code-86"><a href="#lst:code-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst:code-87"><a href="#lst:code-87" aria-hidden="true" tabindex="-1"></a>        x2 <span class="op">=</span> x2 <span class="op">+</span> dt<span class="op">*</span>k2vx<span class="op">;</span></span>
+<span id="lst:code-88"><a href="#lst:code-88" aria-hidden="true" tabindex="-1"></a>        y2 <span class="op">=</span> y2 <span class="op">+</span> dt<span class="op">*</span>k2vy<span class="op">;</span></span>
+<span id="lst:code-89"><a href="#lst:code-89" aria-hidden="true" tabindex="-1"></a>        vx2 <span class="op">=</span> vx2 <span class="op">+</span> dt<span class="op">*(</span>grax<span class="op">(</span>k2x<span class="op">,</span> k2y<span class="op">,</span> k1x<span class="op">,</span> k1y<span class="op">))/</span>m2<span class="op">;</span></span>
+<span id="lst:code-90"><a href="#lst:code-90" aria-hidden="true" tabindex="-1"></a>        vy2 <span class="op">=</span> vy2 <span class="op">+</span> dt<span class="op">*(</span>gray<span class="op">(</span>k2x<span class="op">,</span> k2y<span class="op">,</span> k1x<span class="op">,</span> k1y<span class="op">))/</span>m2<span class="op">;</span></span>
+<span id="lst:code-91"><a href="#lst:code-91" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="lst:code-92"><a href="#lst:code-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst:code-93"><a href="#lst:code-93" aria-hidden="true" tabindex="-1"></a>    fflush<span class="op">(</span>fp<span class="op">);</span></span>
+<span id="lst:code-94"><a href="#lst:code-94" aria-hidden="true" tabindex="-1"></a>    fclose<span class="op">(</span>fp<span class="op">);</span></span>
+<span id="lst:code-95"><a href="#lst:code-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst:code-96"><a href="#lst:code-96" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 新たにgnuplotのプロセスを立ち上げるポインタを定義</span></span>
+<span id="lst:code-97"><a href="#lst:code-97" aria-hidden="true" tabindex="-1"></a>    <span class="dt">FILE</span> <span class="op">*</span>gp<span class="op">;</span></span>
+<span id="lst:code-98"><a href="#lst:code-98" aria-hidden="true" tabindex="-1"></a>    gp <span class="op">=</span> popen<span class="op">(</span><span class="st">&quot;gnuplot -persist&quot;</span><span class="op">,</span> <span class="st">&quot;w&quot;</span><span class="op">);</span></span>
+<span id="lst:code-99"><a href="#lst:code-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst:code-100"><a href="#lst:code-100" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Gnuplotに送るコマンドを定義</span></span>
+<span id="lst:code-101"><a href="#lst:code-101" aria-hidden="true" tabindex="-1"></a>    <span class="dt">char</span> <span class="op">*</span>gnuplotscript <span class="op">=</span>\</span>
+<span id="lst:code-102"><a href="#lst:code-102" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;set terminal gif animate delay 5 optimize size 640,480</span><span class="sc">\n</span><span class="st">&quot;</span></span>
+<span id="lst:code-103"><a href="#lst:code-103" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;set output </span><span class="sc">\&quot;</span><span class="st">binary_star_simulation.gif</span><span class="sc">\&quot;\n</span><span class="st">&quot;</span></span>
+<span id="lst:code-104"><a href="#lst:code-104" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;set title </span><span class="sc">\&quot;</span><span class="st">binary star simulation</span><span class="sc">\&quot;\n</span><span class="st">&quot;</span></span>
+<span id="lst:code-105"><a href="#lst:code-105" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;do for [i=0:99] {</span><span class="sc">\n</span><span class="st">&quot;</span></span>
+<span id="lst:code-106"><a href="#lst:code-106" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;plot [-12:3][-6:5]</span><span class="sc">\&quot;</span><span class="st">binary_star_simulation.dat</span><span class="sc">\&quot;</span><span class="st"> every ::i::i using 1:2 w p pt 7 ps 1 title </span><span class="sc">\&quot;</span><span class="st">Point mass 1</span><span class="sc">\&quot;</span><span class="st">,</span><span class="sc">\\\n</span><span class="st">&quot;</span></span>
+<span id="lst:code-107"><a href="#lst:code-107" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;                  </span><span class="sc">\&quot;</span><span class="st">binary_star_simulation.dat</span><span class="sc">\&quot;</span><span class="st"> every ::i::i using 3:4 w p pt 7 ps 1 title </span><span class="sc">\&quot;</span><span class="st">Point mass 2</span><span class="sc">\&quot;</span><span class="st">,</span><span class="sc">\\\n</span><span class="st">&quot;</span></span>
+<span id="lst:code-108"><a href="#lst:code-108" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;                  </span><span class="sc">\&quot;</span><span class="st">binary_star_simulation.dat</span><span class="sc">\&quot;</span><span class="st"> every ::i::i using 5:6 w p pt 7 ps 1 title </span><span class="sc">\&quot;</span><span class="st">The center of gravity</span><span class="sc">\&quot;</span><span class="st">, </span><span class="sc">\\\n</span><span class="st">&quot;</span></span>
+<span id="lst:code-109"><a href="#lst:code-109" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;                  </span><span class="sc">\&quot;</span><span class="st">binary_star_simulation.dat</span><span class="sc">\&quot;</span><span class="st"> using 1:2 w l title </span><span class="sc">\&quot;</span><span class="st">Point mass 1 with line</span><span class="sc">\&quot;</span><span class="st">, </span><span class="sc">\\\n</span><span class="st">&quot;</span></span>
+<span id="lst:code-110"><a href="#lst:code-110" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;                  </span><span class="sc">\&quot;</span><span class="st">binary_star_simulation.dat</span><span class="sc">\&quot;</span><span class="st"> using 3:4 w l title </span><span class="sc">\&quot;</span><span class="st">Point mass 2 with line</span><span class="sc">\&quot;</span><span class="st">, </span><span class="sc">\\\n</span><span class="st">&quot;</span></span>
+<span id="lst:code-111"><a href="#lst:code-111" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;                  </span><span class="sc">\&quot;</span><span class="st">binary_star_simulation.dat</span><span class="sc">\&quot;</span><span class="st"> using 5:6 w l title </span><span class="sc">\&quot;</span><span class="st">The center of gravity with line</span><span class="sc">\&quot;\n</span><span class="st">&quot;</span></span>
+<span id="lst:code-112"><a href="#lst:code-112" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;}</span><span class="sc">\n</span><span class="st">&quot;</span></span>
+<span id="lst:code-113"><a href="#lst:code-113" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;unset output</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">;</span>  <span class="co">//明示的に終了</span></span>
+<span id="lst:code-114"><a href="#lst:code-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst:code-115"><a href="#lst:code-115" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Gnuplotのプロセスにコマンドを送る</span></span>
+<span id="lst:code-116"><a href="#lst:code-116" aria-hidden="true" tabindex="-1"></a>    fprintf<span class="op">(</span>gp<span class="op">,</span> <span class="st">&quot;</span><span class="sc">%s</span><span class="st">&quot;</span><span class="op">,</span> gnuplotscript<span class="op">);</span></span>
+<span id="lst:code-117"><a href="#lst:code-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst:code-118"><a href="#lst:code-118" aria-hidden="true" tabindex="-1"></a>    <span class="co">// プロセスを閉じる</span></span>
+<span id="lst:code-119"><a href="#lst:code-119" aria-hidden="true" tabindex="-1"></a>    pclose<span class="op">(</span>gp<span class="op">);</span></span>
+<span id="lst:code-120"><a href="#lst:code-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst:code-121"><a href="#lst:code-121" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="lst:code-122"><a href="#lst:code-122" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>以下は上記のプログラムの内，アニメーションを作成するためのプログラムを抜粋したものである．逐一ポインタから渡すのは面倒であるし，コードが読みにくくなる．それを解消するために，ポインタgpに渡す文字列を定義している．この文字列はgnuplotのコマンドと同様である．
+以下がそのプログラムの流れを説明したものである．</p>
+<ol type="1">
+<li><p>datファイルに必要なデータを書き出す</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">FILE</span> <span class="op">*</span>fp<span class="op">;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>fp <span class="op">=</span> fopen<span class="op">(</span><span class="st">&quot;binary_star_simulation.dat&quot;</span><span class="op">,</span> <span class="st">&quot;w&quot;</span><span class="op">);</span></span></code></pre></div>
+<p>と記述し，<code>fprintf(fp,~~~)</code>でポインタを介してbinary_star_simulation.datにデータを書き出す．</p></li>
+<li><p>gnuplotのコマンドを文字列として定義しておく．</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode c c"><code class="sourceCode c"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">FILE</span> <span class="op">*</span>gp<span class="op">;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>gp <span class="op">=</span> popen<span class="op">(</span><span class="st">&quot;gnuplot -persist&quot;</span><span class="op">,</span> <span class="st">&quot;w&quot;</span><span class="op">);</span></span></code></pre></div>
+<p>と記述し，<code>fprintf(gp,~~~)</code>でポインタを介してgnuplotのコマンドを送る．</p></li>
+<li><p>gnuplotのコマンドをポインタに渡す．
+渡した内容は以下の通りである．</p>
+<ol type="1">
+<li>gifアニメーションを作成するための設定</li>
+<li>繰り返しを用いてデータファイルをプロットするための設定</li>
+</ol>
+<p>これらを記述して実行し，gifアニメーションを作成する．</p></li>
+</ol>
+<h1 id="結果">結果</h1>
+<p><span class="citation"
+data-cites="fig:binary_star_simulation">[@fig:binary_star_simulation]</span>に連星のシミュレーションの結果を示す．</p>
+<figure id="fig:binary_star_simulation">
+<img src="binary_star_simulation.gif" style="height:45.0%"
+alt="連星のシミュレーションの結果" />
+<figcaption aria-hidden="true">連星のシミュレーションの結果</figcaption>
+</figure>
+<h1 id="考察">考察</h1>
+<p>質点1と質点2が直線とは程遠い動きをしていても，重心はほぼ直線を描いていることがわかる．
+検証の章で記述したプログラムの通りに，中点法の刻み幅を<code>dt = 0.001</code>とすれば連星の挙動が十分わかることが明らかとなった．しかし，そのままのデータを描画すると，データが多すぎて過剰なので，<code>if(i%300 == 0)</code>として300回に1回のデータを描画するようにした．この描画頻度であっても，十分に挙動を確認することは可能であった．
+また，アニメーションを描画する際には，逐一gnuplotのプロセスにデータを送るのではなく，一度datファイルに格納したファイルを描画するほうが効率的であると感じた．加えて，今回は重心が直線となることを確認したいため，重心の軌跡を線分として描画したほうが直感的であると考え，そのようにした．</p>
