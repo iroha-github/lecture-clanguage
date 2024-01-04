@@ -1,3 +1,8 @@
+/*
+個人課題5-1
+厳密解
+*/
+
 #include<stdio.h>
 #include<math.h>
 
@@ -39,7 +44,7 @@ int main(){
 	y=C1*cos(w1*t)+D1*sin(w1*t)-C2*cos(w2*t)-D2*sin(w2*t);
 
 	FILE *gp;
-	gp=popen("gnuplot -persist","w");
+	gp=popen("gnuplot -persist -slow","w");
 	FILE *fp;
 	fp=fopen("CoupledVibrationRig_dist.dat","w");
 	
@@ -54,7 +59,9 @@ int main(){
 	fclose(fp);
 	fprintf(gp,"set xlabel \"t\"\n");
 	fprintf(gp,"set ylabel \"x,y\"\n");
-	fprintf(gp,"plot \"CoupledVibrationRig_dist.dat\" w l\n");
+	fprintf(gp,"plot \
+    \"CoupledVibrationRig_dist.dat\" u 1:2 w l,\
+    \"CoupledVibrationRig_dist.dat\" u 1:3 w l\n");
 	pclose(gp);
 	return 0;
 	
