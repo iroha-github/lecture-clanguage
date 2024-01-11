@@ -15,26 +15,22 @@ double fθ2(double m,double l,double θ1,double θ2,double w1,double w2){
 
 int main(){
 
- int numi,nump,i;
- double t0,t1,dt,ddt,t;
- double θ1,θ2,w1,w2,θ10,θ20,w10,w20;
- double w0,wm,wp;
+    int numi,nump,i;
+    double t0,t1,dt,ddt,t;
+    double θ1,θ2,w1,w2,θ10,θ20,w10,w20;
+    double w0,wm,wp;
     double kθ1,kw1,kθ2,kw2;
 
- w0=sqrt(l/g);  //バネが一つのときの固有振動数
- wm=sqrt(2 - sqrt(2)) * w0;;  //一つ目のモード
- wp=sqrt(2 + sqrt(2)) * w0;  //二つ目のモード
-
- // 時刻 t0からt1までplot
- t0=0;  //それぞれの初期条件を代入
- t1=20.0;
-//-------------------------------------------------↓初期条件の変更
+    // 時刻 t0からt1までplot
+    t0=0;  //それぞれの初期条件を代入
+    t1=20.0;
+    //初期条件の変更
     θ10=0.03;
-    θ20=0.04242;
+    θ20=-sqrt(2)*θ10;
 
     w10=0;
     w20=0;
-//-------------------------------------------------
+
     dt=0.001;  //中点法の時間刻み幅
     numi=(t1-t0)/dt;  //中点法の試行回数
 
@@ -47,14 +43,14 @@ int main(){
     w1=w10;
     w2=w20;
 
-FILE *fp;
-fp=fopen("data1.dat","w");
+    FILE *fp;
+    fp=fopen("data1.dat","w");
 
- for(i=1;i<=numi;i++){
-    if (i%nump==0){  //plotの時間刻み幅でplot
-    printf("%f %f %f\n",t,θ1,θ2);  //時刻と質点1,2の変位
-    fprintf(fp,"%f %f %f\n",t,θ1,θ2);  //ファイルに出力
-    }
+    for(i=1; i<=numi; i++){
+        if (i % nump ==0){  //plotの時間刻み幅でplot
+            printf("%f %f %f\n",t,θ1,θ2);  //時刻と質点1,2の変位
+            fprintf(fp,"%f %f %f\n",t,θ1,θ2);  //ファイルに出力
+        }
         kθ1=θ1+(dt/2)*w1;  //中点法の時間刻み幅の半分でθ1の位置をオイラー法を用いて計算
         kθ2=θ2+(dt/2)*w2;  //θ2の位置
 
@@ -67,16 +63,18 @@ fp=fopen("data1.dat","w");
         w1=w1+dt*fθ1(m,l,kθ1,kθ2,kw1,kw2);  //θ1の速度を更新
         w2=w2+dt*fθ2(m,l,kθ1,kθ2,kw1,kw2);  //θ2の速度を更新
 
-  t=t+dt;  //時間を更新
- }
-fflush(fp);
-fclose(fp);
+        t=t+dt;  //時間を更新
+    }
 
-FILE *gp;
-gp=popen("gnuplot -persist -slow","w");
-fprintf(gp,"set xlabel \"t\"\n");
-fprintf(gp,"set ylabel \"θ1,θ2\"\n");
-fprintf(gp,"plot \"data1.dat\" using 1:2 with lines title \"θ1\",\"data1.dat\" using 1:3 with lines title \"θ2\"\n");
-pclose(gp);
+    fflush(fp);
+    fclose(fp);
+
+    FILE *gp;
+    gp=popen("gnuplot -persist -slow","w");
+
+    fprintf(gp,"set xlabel \"t\"\n");
+    fprintf(gp,"set ylabel \"θ1,θ2\"\n");
+    fprintf(gp,"plot \"data1.dat\" using 1:2 with lines title \"θ1\",\"data1.dat\" using 1:3 with lines title \"θ2\"\n");
+    pclose(gp);
 
 }

@@ -1,0 +1,54 @@
+# 入力ファイル (配列形式で指定)
+input-files:
+- report.md
+
+# 出力ファイル (単一アイテムで指定)
+output-file: BQ23107-窪田大輝-重心レポート.pdf
+
+# --pdf-engine オプション
+pdf-engine: lualatex
+
+# コードブロックを変更(これは必要なのか？よくわからん)
+listings: true
+
+include-in-header:
+- code-header.tex
+
+# 章に番号を付ける
+number-sections: true
+
+# pandoc-crossref を使う(順番は大事らしい)
+filters:
+- pandoc-crossref
+
+# コードブロックのスタイル→header.texを指定しているので，実質無視
+highlight-style: tango
+
+# 目次を出力する
+table-of-contents: true
+
+# テンプレート変数
+variables:  
+  #documentclass: bxjsarticle
+  fontsize: 11pt
+  documentclass: ltjsarticle
+  luatexjapresetoptions: SourceHanSerifJP-Medium
+  indent: true
+
+  geometry: 
+  - a4paper
+  - margin=2cm
+
+metadata:
+  # ここでちゃんとlistings: trueを指定しないと、コードブロックで"コード 1"と出力されない
+  listings: true
+  documentclass: ltjsarticle 
+  figureTitle: "図"
+  tableTitle: "表"
+  listingTitle: "コード"
+  figPrefix: "図"
+  eqnPrefix: "式"
+  tblPrefix: "表"
+  lstPrefix: "コード"
+  secPrefix: "セクション"
+
