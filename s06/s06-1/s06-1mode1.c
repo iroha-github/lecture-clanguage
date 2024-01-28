@@ -70,7 +70,7 @@ int main(){
     fclose(fp);
 
     FILE *gp;
-    gp=popen("gnuplot -persist -slow","w");
+    gp=popen("gnuplot -persist","w");
 
     fprintf(gp,"set xlabel \"t\"\n");
     fprintf(gp,"set ylabel \"θ1,θ2\"\n");

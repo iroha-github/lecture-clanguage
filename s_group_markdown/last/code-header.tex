@@ -1,0 +1,29 @@
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{myblue}{RGB}{26,13,171}
+\definecolor{mygreen}{RGB}{0,128,0}
+\definecolor{mygray}{RGB}{169,169,169}
+
+\lstset{
+    basicstyle=\ttfamily,
+    keywordstyle=\color{myblue}\bfseries,
+    stringstyle=\color{mygreen},
+    commentstyle=\color{mygray}\itshape,
+    numberstyle=\ttfamily,
+    numbers=none,
+    stepnumber=1,
+    numbersep=15pt,
+    tabsize=4,
+    breaklines=true,
+    captionpos=t,
+    frame=single,
+    rulecolor=\color{mygray},
+    backgroundcolor=\color{gray!10},
+    showspaces=false,
+    showtabs=false,
+    showstringspaces=false
+}
+
+\renewcommand{\lstlistingname}{コード}
+%上のこれを指定しないと、captionが「Listing」になる．

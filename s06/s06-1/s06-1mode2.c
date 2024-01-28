@@ -70,11 +70,11 @@ int main(){
     fclose(fp);
 
     FILE *gp;
-    gp=popen("gnuplot -persist -slow","w");
+    gp=popen("gnuplot -persist","w");
 
     fprintf(gp,"set xlabel \"t\"\n");
     fprintf(gp,"set ylabel \"θ1,θ2\"\n");
-    fprintf(gp,"plot \"data1.dat\" using 1:2 with lines title \"θ1\",\"data1.dat\" using 1:3 with lines title \"θ2\"\n");
+    fprintf(gp,"plot \"data2.dat\" using 1:2 with lines title \"θ1\",\"data2.dat\" using 1:3 with lines title \"θ2\"\n");
     pclose(gp);
 
 }

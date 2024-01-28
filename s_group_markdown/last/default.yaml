@@ -1,0 +1,54 @@
+# 入力ファイル (配列形式で指定)
+input-files:
+- pandoc_binary_star_simulation.md
+
+# 出力ファイル (単一アイテムで指定)
+output-file: グループ課題最終_16班.pdf
+
+# --pdf-engine オプション
+pdf-engine: lualatex
+
+# コードブロックを変更(これは必要なのか)
+listings: true
+
+include-in-header:
+- code-header.tex
+
+# 章に番号を付ける
+number-sections: true
+
+# pandoc-crossref を使う(順番は大事らしい)
+filters:
+- pandoc-crossref
+
+# コードブロックのスタイル
+highlight-style: tango
+
+# 目次を出力する
+table-of-contents: false
+
+# テンプレート変数
+variables:  
+  #documentclass: bxjsarticle
+  fontsize: 11pt
+  documentclass: ltjsarticle
+  luatexjapresetoptions: SourceHanSerifJP-Medium
+  indent: true
+
+  geometry: 
+  - a4paper
+  - margin=2cm
+
+metadata:
+  # ここでちゃんとlistings: trueを指定しないと、コードブロックが出力されない
+  listings: true
+  documentclass: ltjsarticle 
+  figureTitle: "図"
+  tableTitle: "表"
+  listingTitle: "コード"
+  figPrefix: "図"
+  eqnPrefix: "式"
+  tblPrefix: "表"
+  lstPrefix: "コード"
+  secPrefix: "セクション"
+

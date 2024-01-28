@@ -1,34 +1,33 @@
 ---
-title: "情報処理演習Ⅱ グループ課題5"
-subtitle: "連星運動のシミュレーション"
+title: "情報処理演習Ⅱ グループ課題最終"
+subtitle: "万有引力が距離の?乗に比例するときのシミュレーション"
 author: "16班"
-date: "2024-01-01"
+date: "2024-01-28"
 ---
 
-
-| 役職           | 学籍番号 | 名前 |  備考  |
-|---------------|--------|-----|-------|
-| リーダー        | BQ23107 | 窪田 大輝 |      |
-| プログラムリーダー | BQ23008 | 脇家 優太 |     |
-| 企画係          | BQ23071 | 平川 奨  |      |
-| 連絡係          | BQ23060 | 塚田 水月 |      |
-| 書記１          | BQ23110 | 信賀 晃  | 欠席  |
-| 書記２          | BQ23103 | 山田 泰我 | 欠席  |
+| 役職            | 学籍番号 |   名前   |担当章| 備考 |
+| -------------- |--------| ------- | ---|---- |
+| リーダー         | BQ23107 | 窪田 大輝 | 理論/検証 |      |
+| プログラムリーダー | BQ23008 | 脇家 優太 | 検証  |      |
+| 企画係           | BQ23071 | 平川 奨   | 理論 |     |
+| 連絡係           | BQ23060 | 塚田 水月 | 考察  |      |
+| 書記１           | BQ23110 | 信賀 晃   |   |     |
+| 書記２           | BQ23103 | 山田 泰我 |   |     |
 
 # 概要
+今回は万有引力が距離の?乗に比例するときのシミュレーションを行う．？には-3,-2,-1,0,1,2,3の値を入れ，それぞれの場合でgifアニメーションを作成する．
 
-## 連星とは
+# 理論
 
-連星とは、2つの恒星が互いに万有引力により結びつき，それぞれ楕円軌道を描くものである．
-
-## 連星の運動方程式
+## 距離の３乗に比例するときの連星の運動方程式
+一例として，距離の３乗に比例するときの連星の運動方程式を示す．
 
 ![連星の模式図](image-2.png){#fig:Schematic_diagram_of_binary_stars height=45%}
 
 [@fig:Schematic_diagram_of_binary_stars]に連星の模式図を示す．
 質点1,2をデカルト座標系で表す．それぞれの質点1,2に対して，万有引力の法則より質点1にかかる力は質点2から，質点2にかかる力は質点1からとなる．
 
-$|\vec{F}_{1 \to 2}|=|\vec{F}_{2 \to 1}|=G\frac{m_1m_2}{r^2}$
+$|\vec{F}_{1 \to 2}|=|\vec{F}_{2 \to 1}|=G\frac{m_1m_2}{r^3}$
 $\vec{F}_{1 \to 2}=-\vec{F}_{2 \to 1}$
 
 質点1の位置ベクトル$\vec{r_1}=(\vec{x_1},\vec{y_1})$，質点2の位置ベクトル$\vec{r_2}=(\vec{x_2},\vec{y_2})$とする．
@@ -59,10 +58,10 @@ $$\vec{r_{12}}=\vec{r_2}-\vec{r_1}$$とすると，$\vec{F_{1 \to 2}} / \! / \ve
 $$
 \vec{F_{1 \to 2}}=|\vec{F_{1 \to 2}}|\vec{e}
 $$
-ベクトルの規格化$\vec{e}=\frac{\vec{r_{12}}}{|\vec{r_{12}}|}$を行い，$|\vec{F}_{1 \to 2}|=|\vec{F}_{2 \to 1}|=G\frac{m_1m_2}{r^2}$とすると
+ベクトルの規格化$\vec{e}=\frac{\vec{r_{12}}}{|\vec{r_{12}}|}$を行い，$|\vec{F}_{1 \to 2}|=|\vec{F}_{2 \to 1}|=G\frac{m_1m_2}{r^3}$とすると
 
 $$
-\vec{F_{1 \to 2}} = |\vec{F_{1 \to 2}}|\frac{\vec{r_{12}}}{|\vec{r_{12}}|} = G\frac{m_1 m_2}{r^2}\frac{\vec{r_{12}}}{|\vec{r_{12}}|} = G\frac{m_1 m_2 }{r^3}(\vec{r_2}-\vec{r_1})
+\vec{F_{1 \to 2}} = |\vec{F_{1 \to 2}}|\frac{\vec{r_{12}}}{|\vec{r_{12}}|} = G\frac{m_1 m_2}{r^3}\frac{\vec{r_{12}}}{|\vec{r_{12}}|} = G\frac{m_1 m_2 }{r^4}(\vec{r_2}-\vec{r_1})
 $$
 
 <!-- \begin{align*}
@@ -77,8 +76,8 @@ $$
 
 $$
     \begin{cases}
-        m_1 \ddot{x_1}=G\frac{m_1 m_2 }{r^3}(x_2-x_1) \\
-        m_1 \ddot{y_1}=G\frac{m_1 m_2 }{r^3}(y_2-y_1) \\
+        m_1 \ddot{x_1}=G\frac{m_1 m_2 }{r^4}(x_2-x_1) \\
+        m_1 \ddot{y_1}=G\frac{m_1 m_2 }{r^4}(y_2-y_1) \\
     \end{cases}\\
 $$
 
@@ -86,8 +85,8 @@ $$
 
 $$
     \begin{cases}
-        m_2 \ddot{x_2}=-G\frac{m_1 m_2 }{r^3}(x_2-x_1) \\
-        m_2 \ddot{y_2}=-G\frac{m_1 m_2 }{r^3}(y_2-y_1) \\
+        m_2 \ddot{x_2}=-G\frac{m_1 m_2 }{r^4}(x_2-x_1) \\
+        m_2 \ddot{y_2}=-G\frac{m_1 m_2 }{r^4}(y_2-y_1) \\
     \end{cases}\\
 $$
 
@@ -115,10 +114,6 @@ $$
 以下の[@lst:code]のプログラムが検証に用いたプログラムである．中点法を用いている．
 
 ```{#lst:code .c  caption="binary_star_simulation.c"}
-/*
-情報処理演習Ⅱ グループ課題5-2
-連星シミュレーション
-*/
 
 #include<stdio.h>
 #include<math.h>
@@ -132,11 +127,11 @@ double r(double x1, double y1, double x2, double y2) { //質点1と質点2の距
 }
 
 double grax(double x1, double y1, double x2, double y2) { //質点1と質点2のx方向の引力
-    return G*m1*m2*(x2-x1) / (pow(r(x1, y1, x2, y2), 3)); 
+    return G*m1*m2*(x2-x1) / (pow(r(x1, y1, x2, y2), 4)); 
 }
 
 double gray(double x1, double y1, double x2, double y2) { //質点1と質点2のy方向の引力
-    return G*m1*m2*(y2-y1) / (pow(r(x1, y1, x2, y2), 3));
+    return G*m1*m2*(y2-y1) / (pow(r(x1, y1, x2, y2), 4));
 }
 
 double cgx(double x1, double y1, double x2, double y2){ //重心点を表すx方向の関数
@@ -176,11 +171,11 @@ int main(){
     vy1 = vy10;
     vy2 = vy20;
 
-    dt = 0.001; //中点法の時間の刻み幅
+    dt = 0.0001; //中点法の時間の刻み幅
     nint = (t1-t0)/dt;
 
     FILE *fp;
-    fp = fopen("binary_star_simulation.dat", "w");
+    fp = fopen("binary_star_simulation_3.dat", "w");
 
     for(i=1; i<=nint; i++){
         if(i%300 == 0){
@@ -217,15 +212,15 @@ int main(){
     // Gnuplotに送るコマンドを定義
     char *gnuplotscript =\
         "set terminal gif animate delay 5 optimize size 640,480\n"
-        "set output \"binary_star_simulation.gif\"\n"
+        "set output \"binary_star_simulation_3.gif\"\n"
         "set title \"binary star simulation\"\n"
-        "do for [i=0:99] {\n"
-        "plot [-12:3][-6:5]\"binary_star_simulation.dat\" every ::i::i using 1:2 w p pt 7 ps 1 title \"Point mass 1\",\\\n"
-        "                  \"binary_star_simulation.dat\" every ::i::i using 3:4 w p pt 7 ps 1 title \"Point mass 2\",\\\n"
-        "                  \"binary_star_simulation.dat\" every ::i::i using 5:6 w p pt 7 ps 1 title \"The center of gravity\", \\\n"
-        "                  \"binary_star_simulation.dat\" using 1:2 w l title \"Point mass 1 with line\", \\\n"
-        "                  \"binary_star_simulation.dat\" using 3:4 w l title \"Point mass 2 with line\", \\\n"
-        "                  \"binary_star_simulation.dat\" using 5:6 w l title \"The center of gravity with line\"\n"
+        "do for [i=0:999] {\n"
+        "plot [-20:20][-20:20]\"binary_star_simulation_3.dat\" every ::i::i using 1:2 w p pt 7 ps 1 title \"Point mass 1\",\\\n"
+        "                  \"binary_star_simulation_3.dat\" every ::i::i using 3:4 w p pt 7 ps 1 title \"Point mass 2\",\\\n"
+        "                  \"binary_star_simulation_3.dat\" every ::i::i using 5:6 w p pt 7 ps 1 title \"The center of gravity\", \\\n"
+        "                  \"binary_star_simulation_3.dat\" using 1:2 w l title \"Point mass 1 with line\", \\\n"
+        "                  \"binary_star_simulation_3.dat\" using 3:4 w l title \"Point mass 2 with line\", \\\n"
+        "                  \"binary_star_simulation_3.dat\" using 5:6 w l title \"The center of gravity with line\"\n"
         "}\n"
         "unset output\n";  //明示的に終了
 
@@ -268,13 +263,46 @@ int main(){
 
     これらを記述して実行し，gifアニメーションを作成する．
 
+\clearpage
 # 結果
-[@fig:binary_star_simulation]に連星のシミュレーションの結果を示す．
 
+## 距離の3乗に比例するときのシミュレーション
+[@fig:binary_star_simulation_3]に連星のシミュレーションの結果を示す．
 
-![連星のシミュレーションの結果](binary_star_simulation.gif){#fig:binary_star_simulation height=45%}
+![距離の3乗に比例するときの連星のシミュレーションの結果](binary_star_simulation_3.gif){#fig:binary_star_simulation_3 height=32%}
+
+## 距離の2乗に比例するときのシミュレーション
+[@fig:binary_star_simulation_2]に連星のシミュレーションの結果を示す．
+
+![距離の2乗に比例するときの連星のシミュレーションの結果](binary_star_simulation_2.gif){#fig:binary_star_simulation_2 height=32%}
+
+## 距離の1乗に比例するときのシミュレーション
+[@fig:binary_star_simulation_1]に連星のシミュレーションの結果を示す．
+
+![距離の1乗に比例するときの連星のシミュレーションの結果](binary_star_simulation_1.gif){#fig:binary_star_simulation_1 height=32%}
+
+## 距離の0乗に比例するときのシミュレーション
+[@fig:binary_star_simulation_0]に連星のシミュレーションの結果を示す．
+
+![距離の0乗に比例するときの連星のシミュレーションの結果](binary_star_simulation_0.gif){#fig:binary_star_simulation_0 height=32%}
+
+## 距離の-1乗に比例するときのシミュレーション
+[@fig:binary_star_simulation_-1]に連星のシミュレーションの結果を示す．
+
+![距離の-2乗に比例するときの連星のシミュレーションの結果](binary_star_simulation_-1.gif){#fig:binary_star_simulation_-1 height=32%}
+
+## 距離の-2乗に比例するときのシミュレーション
+[@fig:binary_star_simulation_-2]に連星のシミュレーションの結果を示す．
+
+![距離の-2乗に比例するときの連星のシミュレーションの結果](binary_star_simulation_-2.gif){#fig:binary_star_simulation_-2 height=32%}
+
+## 距離の-3乗に比例するときのシミュレーション
+[@fig:binary_star_simulation_-3]に連星のシミュレーションの結果を示す．
+
+![距離の-2乗に比例するときの連星のシミュレーションの結果](binary_star_simulation_-3.gif){#fig:binary_star_simulation_-3 height=32%}
+
 
 # 考察
 質点1と質点2が直線とは程遠い動きをしていても，重心はほぼ直線を描いていることがわかる．
-検証の章で記述したプログラムの通りに，中点法の刻み幅を`dt = 0.001`とすれば連星の挙動が十分わかることが明らかとなった．しかし，そのままのデータを描画すると，データが多すぎて過剰なので，`if(i%300 == 0)`として300回に1回のデータを描画するようにした．この描画頻度であっても，十分に挙動を確認することは可能であった．
+検証の章で記述したプログラムの通りに，中点法の刻み幅を`dt = 0.0001`とすれば連星の挙動が十分わかることが明らかとなった．しかし，そのままのデータを描画すると，データが多すぎて過剰なので，`if(i%300 == 0)`として300回に1回のデータを描画するようにした．この描画頻度であっても，十分に挙動を確認することは可能であった．
 また，アニメーションを描画する際には，逐一gnuplotのプロセスにデータを送るのではなく，一度datファイルに格納したファイルを描画するほうが効率的であると感じた．加えて，今回は重心が直線となることを確認したいため，重心の軌跡を線分として描画したほうが直感的であると考え，そのようにした．
